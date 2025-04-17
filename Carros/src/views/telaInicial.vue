@@ -1,9 +1,8 @@
 <script setup>
-import telaInicial from './views/telaInicial.vue';
 </script>
 
 <template>
-  <telaInicial />
+    <h1>Olá Mundo!!</h1>
 </template>
 
 <style scoped>
