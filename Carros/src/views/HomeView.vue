@@ -1,9 +1,13 @@
 <script setup>
+
+
 </script>
 
 <template>
-  <router-view />
+    <h1>ola mundo</h1>
 </template>
 
 <style scoped>
+
+
 </style>
