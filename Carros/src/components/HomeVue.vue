@@ -1,11 +1,18 @@
 <script setup>
 </script>
 <template>
-        <nav>
+        <nav class="navbar-desktop">
             <img class="logo" src="/logo.png" alt="">
             <div class="icons">
                 <a href=""><img class="user-img" src="/user.png" alt=""></a>
                 <a href=""><img class="cart-img" src="/shopping-cart.png" alt=""></a>
+            </div>
+        </nav>
+        <nav class="navbar-mobile">
+            <div class="conteudo-nav">
+                <a href=""><img src="/user.png" class="user-img-mobile" alt=""></a>
+                <img src="/logo.png" class="logo-mobile" alt="">
+                <a href=""><img class="cart-img-mobile" src="/shopping-cart.png" alt=""></a>
             </div>
         </nav>
         <div class="container">
@@ -36,8 +43,24 @@
     display: flex;
     justify-content: center;
 }
-
-nav {
+.navbar-mobile{
+    width: 100%;
+    height: 105px;
+    display: none;
+    background-color: white;
+}
+.cart-img-mobile, .user-img-mobile{
+    width: 40px;
+    height: 40px;
+}
+.logo-mobile{
+    width: 100px;
+    height: 100px;
+}
+.conteudo-nav{
+    align-items: center;    
+}
+.navbar-desktop {
     width: 100%;
     height: 140px;
     display: flex;
@@ -51,10 +74,10 @@ nav {
     margin-left: 68px;
 }
 .icons{
-    margin-left: 1075px;
+    margin-left: 72.9%;
 }
 .cart-img{
-    margin-left: 55px;
+    margin-left: 30px;
 }
 .card{
     width: 1360px;
@@ -62,6 +85,7 @@ nav {
     background-image: url(/card-all.png);
     border-radius: 32px;
     margin-top: 23px;
+    background-size: cover;
 }
 .card > h1{
     font-size: 50px;
@@ -69,7 +93,7 @@ nav {
     color: white;
     margin-top: 122px;
     width: 521px;
-    margin-left: 122px;
+    margin-left: 9%;
     margin-right: 717px;
 }
 .ver-mais{
@@ -77,8 +101,8 @@ nav {
     height: 90px;
     font-size: 25px;
     border-radius: 18px;
-    margin-left: 1015px;
-    margin-top: 50px;
+    margin-left: 74%;
+    margin-top: 5.5%;
     background-color: #4A1010;
     color: white;
     border: none;
@@ -97,34 +121,443 @@ nav {
     font-weight: 500;
 }
 .categorias{
-    display: grid;
-    grid-template-columns: 635px 635px;
-    grid-template-rows: 650px 650px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 84px 90px;
 }
 .itens{
     width: 635px;
+    height: 650px;
     border-radius: 32px;
+    cursor: pointer;
 }
+
 #brinquedos{
     background-image: url(/mioamigoPC.png);
+    background-size: cover;
+    background-position: center;
 }
 #roupas{
     background-image: url(/roupas-categoria.png);
+    background-size: cover;
+    background-position: center;
 }
 #pistas{
     background-image: url(/pistas-categorias.png);
+    background-size: cover;
+    background-position: center;
 }
 #acessorios{
     background-image: url(/acessorios-categorias.png);
+    background-size: cover;
+    background-position: center;
 }
 .itens > h1{
     color: white;
     text-align: center;
     font-weight: bolder;
-    margin-top: 507px;
+    margin-top: 78%;
     font-size: 60px;
+}
+
+@media (max-width: 1425px){
+    .navbar-desktop{
+        display: flex;
+    }
+    .icons{
+        margin-left: 70%;
+    }
+    .ver-mais{
+        width: 220px;
+        height: 75px;
+        font-size: 21px;
+        border-radius: 15px;
+        margin-left: 78%;
+        margin-top: 5%;
+    }
+    .card{
+        width: 1275px;
+        height: 440px;
+    }
+    .card > h1{
+        width: 500px;
+        font-size: 55px;
+        margin-top: 80px;
+    }
+    .categorias{
+    gap: 80px 80px;
+    }
+   .itens{
+    width: 600px;
+    height: 650px;
+   }
+   .itens > h1{
+    font-size: 50px;
+    margin-top: 500px;
+   }
+   .texto-categorias{
+    font-size: 60px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    margin-left: 6%;
+    font-weight: 400;
+   }
+}
+@media (max-width: 1146px){
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .conteudo-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 32px;
+    }
+    .ver-mais{
+        width: 185px;
+        height: 65px;
+        font-size: 18px;
+        border-radius: 12px;
+        margin-left: 71%;
+        margin-top: 10%;
+    }
+    .card{
+        width: 1000px;
+        height: 400px;
+    }
+    .card > h1{
+        width: 390px;
+        font-size: 40px;
+        margin-top: 80px;
+    }
+    .categorias{
+    gap: 50px 63px;
+    }
+   .itens{
+    width: 460px;
+    height: 550px;
+   }
+   .itens > h1{
+    font-size: 35px;
+    margin-top: 440px;
+   }
+   .texto-categorias{
+    font-size: 50px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    margin-left: 10%;
+    font-weight: 400;
+   }
+}
+@media (max-width: 1040px){
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .conteudo-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 32px;
+    }
+    .ver-mais{
+        width: 185px;
+        height: 65px;
+        font-size: 18px;
+        border-radius: 12px;
+        margin-left: 71%;
+        margin-top: 10%;
+    }
+    .card{
+        width: 900px;
+        height: 400px;
+    }
+    .card > h1{
+        width: 390px;
+        font-size: 40px;
+        margin-top: 80px;
+    }
+    .categorias{
+    gap: 50px 63px;
+    }
+   .itens{
+    width: 410px;
+    height: 550px;
+   }
+   .itens > h1{
+    font-size: 35px;
+    margin-top: 440px;
+   }
+   .texto-categorias{
+    font-size: 50px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    margin-left: 10%;
+    font-weight: 400;
+   }
+}
+@media (max-width: 1010px){
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .conteudo-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 32px;
+    }
+    .ver-mais{
+        width: 185px;
+        height: 65px;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-left: 71%;
+        margin-top: 7%;
+    }
+    .card{
+        width: 850px;
+        height: 340px;
+    }
+    .card > h1{
+        width: 270px;
+        font-size: 30px;
+        margin-top: 70px;
+        margin-left: 7%;
+    }
+    .categorias{
+    gap: 35px 53px;
+    }
+   .itens{
+    width: 395px;
+    height: 455px;
+   }
+   .itens > h1{
+    font-size: 27px;
+    margin-top: 360px;
+   }
+   .texto-categorias{
+    font-size: 40px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    margin-left: 8%;
+    font-weight: 400;
+   }
+}
+@media (max-width: 900px){
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .conteudo-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 32px;
+    }
+    .ver-mais{
+        width: 165px;
+        height: 60px;
+        font-size: 17px;
+        border-radius: 10px;
+        margin-left: 71%;
+        margin-top: 6%;
+    }
+    .card{
+        width: 690px;
+        height: 310px;
+    }
+    .card > h1{
+        width: 270px;
+        font-size: 30px;
+        margin-top: 70px;
+        margin-left: 7%;
+    }
+    .categorias{
+    gap: 35px 53px;
+    }
+   .itens{
+    width: 310px;
+    height: 370px;
+   }
+   .itens > h1{
+    font-size: 23px;
+    margin-top: 290px;
+   }
+   .texto-categorias{
+    font-size: 40px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    margin-left: 12%;
+    font-weight: 400;
+   }
+}
+@media (max-width: 750px){
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .conteudo-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 32px;
+    }
+    .ver-mais{
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 10px;
+        margin-left: 70%;
+    }
+    .card{
+        width: 580px;
+        height: 250px;
+    }
+    .card > h1{
+        width: 220px;
+        font-size: 24px;
+        margin-top: 35px;
+    }
+    .categorias{
+    gap: 30px 47px;
+    }
+   .itens{
+    width: 260px;
+    height: 310px;
+   }
+   .itens > h1{
+    font-size: 17px;
+    margin-top: 250px;
+   }
+   .texto-categorias{
+    font-size: 32px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    margin-left: 13%;
+    font-weight: 400;
+   }
+}
+
+@media (max-width: 625px){
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .conteudo-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 32px;
+    }
+    .ver-mais{
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 10px;
+        margin-left: 60%;
+    }
+    .card{
+        width: 500px;
+        height: 235px;
+    }
+    .card > h1{
+        width: 220px;
+        font-size: 24px;
+        margin-top: 35px;
+    }
+    .categorias{
+    gap: 30px 47px;
+    }
+   .itens{
+    width: 220px;
+    height: 260px;
+   }
+   .itens > h1{
+    font-size: 17px;
+    margin-top: 200px;
+   }
+   .texto-categorias{
+    font-size: 32px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    margin-left: 10%;
+    font-weight: 400;
+   }
+}
+@media (max-width: 500px){
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .conteudo-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 32px;
+    }
+    .ver-mais{
+        width: 125px;
+        height: 40px;
+        font-size: 15px;
+        border-radius: 10px;
+        margin-left: 56%;
+    }
+    .card{
+        width: 351px;
+        height: 186px;
+    }
+    .card > h1{
+        width: 220px;
+        font-size: 21px;
+        margin-top: 45px;
+    }
+    .categorias{
+    gap: 30px 47px;
+    }
+   .itens{
+    width: 170px;
+    height: 222px;
+   }
+   #brinquedos{
+    background-size: 170px 215px;
+   }
+   #roupas{
+    background-size: 190px 222px;
+   }
+   #pistas{
+    background-size: 180px 215px;
+   }
+   #acessorios{
+    background-size: 170px 215px;
+   }
+   .itens > h1{
+    font-size: 15px;
+    margin-top: 176px;
+   }
+   .texto-categorias{
+    font-size: 32px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    margin-left: 31px;
+    font-weight: 400;
+   }
 }
 
 </style>
