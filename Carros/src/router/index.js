@@ -12,7 +12,7 @@ const routes = [
     path: '/TelaInicial',
     name: 'telaInicial',
     component: TelaInicialView
-  }
+  },
 ]
 
 const router = createRouter({
