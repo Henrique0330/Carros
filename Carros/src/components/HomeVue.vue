@@ -9,24 +9,30 @@
             </div>
         </nav>
         <div class="container">
-            <div class="content">
-                <div class="card-all">
+            <div class="content-card">
+                <div class="card">
                     <h1>Veja todos os produtos McStore!</h1>
                     <button class="ver-mais">VER MAIS!</button>
                 </div>
             </div>
+            <h1 class="texto-categorias">Categorias</h1>
+                <div class="categorias">
+                    <div id="brinquedos" class="itens"><h1>BRINQUEDOS</h1></div>
+                    <div id="roupas" class="itens"><h1>ROUPAS</h1></div>
+                    <div id="pistas" class="itens"><h1>PISTAS</h1></div>
+                    <div id="acessorios" class="itens"><h1>ACESSÓRIOS</h1></div>
+                </div>
         </div>
 </template>
 
 <style scoped>
 
 .container {
-    width: 1440px;
-    height: 1040;
-}
-.content{
     width: 100%;
     height: 100%;
+    
+}
+.content-card{
     display: flex;
     justify-content: center;
 }
@@ -45,19 +51,19 @@ nav {
     margin-left: 68px;
 }
 .icons{
-    margin-left: 1002px;
+    margin-left: 1075px;
 }
 .cart-img{
     margin-left: 55px;
 }
-.card-all{
+.card{
     width: 1360px;
     height: 488px;
     background-image: url(/card-all.png);
     border-radius: 32px;
     margin-top: 23px;
 }
-.card-all > h1{
+.card > h1{
     font-size: 50px;
     font-weight: bolder;
     color: white;
@@ -78,6 +84,47 @@ nav {
     border: none;
     cursor: pointer;
     font-weight: bold;
+}
+.ver-mais:hover{
+    background-color: #260909;
+}
+.texto-categorias{
+    color: black;
+    font-size: 60px;
+    margin-top: 66px;
+    margin-bottom: 66px;
+    margin-left: 90px;
+    font-weight: 500;
+}
+.categorias{
+    display: grid;
+    grid-template-columns: 635px 635px;
+    grid-template-rows: 650px 650px;
+    justify-content: center;
+    gap: 84px 90px;
+}
+.itens{
+    width: 635px;
+    border-radius: 32px;
+}
+#brinquedos{
+    background-image: url(/mioamigoPC.png);
+}
+#roupas{
+    background-image: url(/roupas-categoria.png);
+}
+#pistas{
+    background-image: url(/pistas-categorias.png);
+}
+#acessorios{
+    background-image: url(/acessorios-categorias.png);
+}
+.itens > h1{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 507px;
+    font-size: 60px;
 }
 
 </style>
