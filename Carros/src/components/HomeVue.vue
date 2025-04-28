@@ -117,7 +117,7 @@
     font-size: 60px;
     margin-top: 66px;
     margin-bottom: 66px;
-    margin-left: 90px;
+    margin-left: 6%;
     font-weight: 500;
 }
 .categorias{
@@ -127,8 +127,8 @@
     gap: 84px 90px;
 }
 .itens{
-    width: 635px;
-    height: 650px;
+    width: 600px;
+    height: 635px;
     border-radius: 32px;
     cursor: pointer;
 }
