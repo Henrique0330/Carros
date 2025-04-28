@@ -1,24 +1,37 @@
 <script setup>
+import { ref } from 'vue'
+import LoginComponent from './LoginComponent.vue' 
+
+const loginModalRef = ref(null)
+
+const openLoginModal = () => {
+  if (loginModalRef.value) {
+    loginModalRef.value.openModal()
+  }
+}
 </script>
 
 <template>
-    <div class="background-image"></div>
-    <div class="container">
-        <img class="logo" src="/McStore.png" alt="logo">
-        <div class="text">
-            <p>Read more and stress less with our online book shopping app. Shop from anywhere you are and discover
-                titles that you love. Happy reading!</p>
-        </div>
+  <div class="background-image"></div>
+  <div class="container">
+    <img class="logo" src="/McStore.png" alt="logo">
+    <div class="text">
+      <p>Read more and stress less with our online book shopping app. Shop from anywhere you are and discover
+        titles that you love. Happy reading!</p>
     </div>
-    <div class="buttom">
-        <div class="login">
-            <button class="buttomLogin">Faça o login!</button>
-        </div>
-        <span>|</span>
-        <div class="register">
-            <button class="buttomRegister">Registrar-se!</button>
-        </div>
+  </div>
+
+  <div class="buttom">
+    <div class="login">
+      <button class="buttomLogin" @click="openLoginModal">Faça o login!</button>
     </div>
+    <span>|</span>
+    <div class="register">
+      <button class="buttomRegister">Registrar-se!</button>
+    </div>
+  </div>
+
+  <LoginComponent ref="loginModalRef" title="Bem-vindo de volta!" />
 </template>
 
 <style scoped>
