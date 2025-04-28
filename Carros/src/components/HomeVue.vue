@@ -80,11 +80,11 @@
     margin-left: 30px;
 }
 .card{
-    width: 1360px;
+    width: 1100px;
     height: 488px;
     background-image: url(/card-all.png);
     border-radius: 32px;
-    margin-top: 23px;
+    margin-top: 30px;
     background-size: cover;
 }
 .card > h1{
@@ -97,9 +97,9 @@
     margin-right: 717px;
 }
 .ver-mais{
-    width: 271px;
-    height: 90px;
-    font-size: 25px;
+    width: 200px;
+    height: 75px;
+    font-size: 20px;
     border-radius: 18px;
     margin-left: 74%;
     margin-top: 5.5%;
@@ -115,21 +115,20 @@
 .texto-categorias{
     color: black;
     font-size: 60px;
-    margin-top: 66px;
-    margin-bottom: 66px;
-    margin-left: 6%;
+    margin: 61px 0;
+    text-align: center;
     font-weight: 500;
 }
 .categorias{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 84px 90px;
+    gap: 40px;
 }
 .itens{
-    width: 550px;
-    height: 585px;
-    border-radius: 32px;
+    width: 535px;
+    height: 520px;
+    border-radius: 25px;
     cursor: pointer;
 }
 
@@ -157,8 +156,8 @@
     color: white;
     text-align: center;
     font-weight: bolder;
-    margin-top: 78%;
-    font-size: 60px;
+    margin-top: 80%;
+    font-size: 40px;
 }
 
 @media (max-width: 1425px){
@@ -177,7 +176,7 @@
         margin-top: 5%;
     }
     .card{
-        width: 1275px;
+        width: 1150px;
         height: 440px;
     }
     .card > h1{
@@ -189,8 +188,8 @@
     gap: 80px 80px;
     }
    .itens{
-    width: 600px;
-    height: 650px;
+    width: 530px;
+    height: 510px;
    }
    .itens > h1{
     font-size: 50px;
@@ -198,13 +197,10 @@
    }
    .texto-categorias{
     font-size: 60px;
-    margin-top: 31px;
-    margin-bottom: 31px;
-    margin-left: 6%;
-    font-weight: 400;
+    text-align: center;
    }
 }
-@media (max-width: 1146px){
+@media (max-width: 1180px){
     .navbar-desktop{
         display: none;
     }
@@ -247,10 +243,6 @@
    }
    .texto-categorias{
     font-size: 50px;
-    margin-top: 31px;
-    margin-bottom: 31px;
-    margin-left: 10%;
-    font-weight: 400;
    }
 }
 @media (max-width: 1040px){
@@ -294,13 +286,7 @@
     font-size: 35px;
     margin-top: 440px;
    }
-   .texto-categorias{
-    font-size: 50px;
-    margin-top: 31px;
-    margin-bottom: 31px;
-    margin-left: 10%;
-    font-weight: 400;
-   }
+  
 }
 @media (max-width: 1010px){
     .navbar-desktop{
@@ -346,10 +332,6 @@
    }
    .texto-categorias{
     font-size: 40px;
-    margin-top: 31px;
-    margin-bottom: 31px;
-    margin-left: 8%;
-    font-weight: 400;
    }
 }
 @media (max-width: 900px){
@@ -393,13 +375,6 @@
    .itens > h1{
     font-size: 23px;
     margin-top: 290px;
-   }
-   .texto-categorias{
-    font-size: 40px;
-    margin-top: 31px;
-    margin-bottom: 31px;
-    margin-left: 12%;
-    font-weight: 400;
    }
 }
 @media (max-width: 750px){
@@ -446,8 +421,6 @@
     font-size: 32px;
     margin-top: 28px;
     margin-bottom: 28px;
-    margin-left: 13%;
-    font-weight: 400;
    }
 }
 
@@ -474,6 +447,7 @@
     .card{
         width: 500px;
         height: 235px;
+        border-radius: 18px;
     }
     .card > h1{
         width: 220px;
@@ -490,13 +464,6 @@
    .itens > h1{
     font-size: 17px;
     margin-top: 200px;
-   }
-   .texto-categorias{
-    font-size: 32px;
-    margin-top: 28px;
-    margin-bottom: 28px;
-    margin-left: 10%;
-    font-weight: 400;
    }
 }
 @media (max-width: 500px){
@@ -520,7 +487,7 @@
         margin-left: 56%;
     }
     .card{
-        width: 351px;
+        width: 365px;
         height: 186px;
     }
     .card > h1{
@@ -529,11 +496,12 @@
         margin-top: 45px;
     }
     .categorias{
-    gap: 30px 47px;
+    gap: 30px 35px;
     }
    .itens{
     width: 170px;
     height: 222px;
+    border-radius: 25px;
    }
    #brinquedos{
     background-size: 170px 215px;
@@ -555,8 +523,6 @@
     font-size: 32px;
     margin-top: 31px;
     margin-bottom: 31px;
-    margin-left: 31px;
-    font-weight: 400;
    }
 }
 
