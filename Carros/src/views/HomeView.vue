@@ -4,7 +4,7 @@ import HomeVue from '@/components/HomeVue.vue';
 
 <template>
     <HomeVue />
-<template>
+</template>
     
 
 <style scoped>
