@@ -127,8 +127,8 @@
     gap: 84px 90px;
 }
 .itens{
-    width: 600px;
-    height: 635px;
+    width: 550px;
+    height: 585px;
     border-radius: 32px;
     cursor: pointer;
 }
