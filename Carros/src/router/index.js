@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TelaInicialView from '../views/TelaInicialView.vue'
+import LoginComponentView from '@/views/LoginComponentView.vue'
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     name: 'telaInicial',
     component: TelaInicialView
   },
+  {
+    path: '/Login',
+    name: 'loginComponent',
+    component: LoginComponentView
+  }
 ]
 
 const router = createRouter({
