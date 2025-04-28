@@ -114,7 +114,7 @@
 }
 .texto-categorias{
     color: black;
-    font-size: 60px;
+    font-size: 50px;
     margin: 61px 0;
     text-align: center;
     font-weight: 500;
@@ -123,11 +123,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 37.9px;
 }
 .itens{
-    width: 535px;
-    height: 520px;
+    width: 480px;
+    height: 450px;
     border-radius: 25px;
     cursor: pointer;
 }
@@ -146,18 +146,20 @@
     background-image: url(/pistas-categorias.png);
     background-size: cover;
     background-position: center;
+    margin-bottom: 10px;
 }
 #acessorios{
     background-image: url(/acessorios-categorias.png);
     background-size: cover;
     background-position: center;
+    margin-bottom: 10px;
 }
 .itens > h1{
     color: white;
     text-align: center;
     font-weight: bolder;
-    margin-top: 80%;
-    font-size: 40px;
+    margin-top: 75%;
+    font-size: 30px;
 }
 
 @media (max-width: 1425px){
@@ -168,7 +170,7 @@
         margin-left: 70%;
     }
     .ver-mais{
-        width: 220px;
+        width: 200px;
         height: 75px;
         font-size: 21px;
         border-radius: 15px;
@@ -176,7 +178,7 @@
         margin-top: 5%;
     }
     .card{
-        width: 1150px;
+        width: 1050px;
         height: 440px;
     }
     .card > h1{
@@ -187,14 +189,8 @@
     .categorias{
     gap: 80px 80px;
     }
-   .itens{
-    width: 530px;
-    height: 510px;
-   }
-   .itens > h1{
-    font-size: 50px;
-    margin-top: 500px;
-   }
+
+   
    .texto-categorias{
     font-size: 60px;
     text-align: center;
@@ -222,7 +218,7 @@
         margin-top: 10%;
     }
     .card{
-        width: 1000px;
+        width: 980px;
         height: 400px;
     }
     .card > h1{
@@ -493,7 +489,7 @@
     .card > h1{
         width: 220px;
         font-size: 21px;
-        margin-top: 45px;
+        margin-top: 40px;
     }
     .categorias{
     gap: 30px 35px;
