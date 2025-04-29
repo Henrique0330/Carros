@@ -1,108 +1,72 @@
 <template>
-    <div :class="['modal', showModal ? 'visible' : 'hidden']" @click.self="closeModal">
-      <div class="form-container">
-        <div class="fechar" @click="closeModal">
-            <img src="@/assets/fecharLogi.png" alt="Fechar" />
-        </div>
-  
-        <div class="containerInterno">
-          <p class="title">Faça o login</p>
-          <p class="sub-title">Please fill your details to login.</p>
-  
-          <div class="conteudo">
-            <div class="form-item">
-              <input type="text" v-model="user.name" placeholder="Username/email" />
-            </div>
-  
-            <div class="form-item">
-              <input :type="showPassword ? 'text' : 'password'" v-model="user.senha" placeholder="Password" />
-              <span class="eye" @click="showPassword = !showPassword">
-                <img src="@/assets/imgLogin.png" alt="Eye Icon" />
-              </span>
-            </div>
-  
-            <button class="login-button" @click="closeModal">KATCHAU!</button>
-  
-            <p class="forgot-password">forgot password?</p>
+  <div class="pagina-login">
+      <div class="fechar" @click="voltar">
+        <img src="@/assets/fecharLogi.png" alt="Fechar" />
+      </div>
+
+      <div class="containerInterno">
+        <p class="title">Faça o login</p>
+        <p class="sub-title">Please fill your details to login.</p>
+
+        <div class="conteudo">
+          <div class="form-item">
+            <input type="text" v-model="user.name" placeholder="Username/email" />
           </div>
+
+          <div class="form-item">
+            <input :type="showPassword ? 'text' : 'password'" v-model="user.senha" placeholder="Password" />
+            <div class="eye" @click="showPassword = !showPassword">
+              <img src="@/assets/VerSenha.png" alt="Eye Icon" />
+            </div>
+          </div>
+
+          <button class="login-button" @click="voltar">KATCHAU!</button>
+
+          <p class="forgot-password">forgot password?</p>
         </div>
       </div>
-    </div>
-  </template>
-  
+  </div>
+</template>
 
 <script setup>
-import { reactive, ref, defineExpose } from 'vue'
+import { reactive, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 defineProps(['title'])
 
-const showModal = ref(false)
+const router = useRouter()
 const showPassword = ref(false)
 
 const user = reactive({
   name: '',
-  senha: '',
+  senha: ''
 })
 
-const closeModal = () => {
-  showModal.value = false
+const voltar = () => {
+  router.push('/')
 }
-
-const openModal = () => {
-  showModal.value = true
-}
-
-defineExpose({
-  openModal,
-  closeModal
-})
 </script>
 
 <style scoped>
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
+.pagina-login {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(20px); 
+  height: 100vh;
+  background: url('@/assets/imgLogin.png') no-repeat center center;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  filter: blur();
-}
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.visible {
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-.form-container {
-  width: 380px;
-  min-height: 550px;
-  background: url('@/assets/imgLogin.png') no-repeat center/cover; 
-  border-radius: 20px;
-  padding: 20px;
   position: relative;
-  overflow: hidden;
 }
 
 .containerInterno {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-left: 30px;
   margin-right: 30px;
-  color: rgb(255, 255, 255);
+  gap: 10px;
+  color: white;
   text-align: center;
 }
 
@@ -112,6 +76,7 @@ defineExpose({
 }
 
 .sub-title {
+  margin-top: 20px;
   font-size: 14px;
   margin-bottom: 20px;
 }
@@ -139,13 +104,14 @@ input {
 
 .eye {
   position: absolute;
-  right: 15px;
-  top: 10px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 
 .eye img {
-  width: 0
+  width: 20px;
 }
 
 .login-button {
@@ -182,10 +148,9 @@ input {
   cursor: pointer;
 }
 
-.fechar img{
+.fechar img {
   width: 20px;
   height: 20px;
   object-fit: contain;
-  font-weight: bold;
 }
 </style>

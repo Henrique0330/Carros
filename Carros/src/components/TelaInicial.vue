@@ -1,13 +1,10 @@
 <script setup>
-import { ref } from 'vue'
-import LoginComponent from './LoginComponent.vue' 
+import { useRouter } from 'vue-router'
 
-const loginModalRef = ref(null)
+const router = useRouter()
 
-const openLoginModal = () => {
-  if (loginModalRef.value) {
-    loginModalRef.value.openModal()
-  }
+const openLoginPage = () => {
+  router.push('/login')
 }
 </script>
 
@@ -16,23 +13,25 @@ const openLoginModal = () => {
   <div class="container">
     <img class="logo" src="/McStore.png" alt="logo">
     <div class="text">
-      <p>Read more and stress less with our online book shopping app. Shop from anywhere you are and discover
-        titles that you love. Happy reading!</p>
+      <p>
+        Read more and stress less with our online book shopping app.
+        Shop from anywhere you are and discover titles that you love.
+        Happy reading!
+      </p>
     </div>
   </div>
 
   <div class="buttom">
     <div class="login">
-      <button class="buttomLogin" @click="openLoginModal">Faça o login!</button>
+      <button class="buttomLogin" @click="openLoginPage">Faça o login!</button>
     </div>
     <span>|</span>
     <div class="register">
       <button class="buttomRegister">Registrar-se!</button>
     </div>
   </div>
-
-  <LoginComponent ref="loginModalRef" title="Bem-vindo de volta!" />
 </template>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -181,7 +180,6 @@ span {
 
     .text {
         top: 70%;
-        /* Mudei o valor de "top" para deslocar o texto para baixo */
         left: 10%;
         width: 80%;
         font-size: 14px;
@@ -225,7 +223,6 @@ span {
 
     .text {
         top: 66%;
-        /* Mudei o valor de "top" para deslocar o texto para baixo */
         left: 10%;
         width: 80%;
         font-size: 14px;
