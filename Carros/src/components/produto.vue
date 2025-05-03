@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="buttons">
-            <button class="botaoVoltar"><img src="/public/setinha.png" alt=""></button>
-            <button class="botao"><img src="/public/carrinho.png" alt=""></button>
+            <button class="botaoVoltar" style="left: 23px;"><img src="/public/setinha.png" alt=""></button>
+            <button class="botao" style="right: 23px;"><img src="/public/carrinho.png" alt=""></button>
         </div>
         <div class="card">
             <div class="car-image">
@@ -13,7 +13,7 @@
                     <p>Fiat argo 1.8 flex</p>
                 </div>
                 <div class="precoConta">
-                    <p class="price">R$159,00</p>
+                    <p class="price" style="letter-spacing: 1px; font-size: 25px;">R$159,00</p>
                     <div class="quantity">
                         <button @click="increase">+</button>
                         <span style="font-weight: bolder;">{{ quantity }}</span>
@@ -106,18 +106,8 @@ function decrease() {
     border-radius: 20px;
     padding: 10px;
     font-size: 18px;
-}
-
-.botao {
     position: absolute;
     top: 20px;
-    right: 23px;
-}
-
-.botaoVoltar {
-    position: absolute;
-    top: 20px;
-    left: 23px;
 }
 
 .card {
@@ -132,7 +122,6 @@ function decrease() {
 .car-image img {
     width: 450px;
     object-fit: contain;
-    border-radius: 10px;
 }
 
 .details {
@@ -142,11 +131,6 @@ function decrease() {
     width: 40vw;
 }
 
-.price {
-    font-size: 25px;
-    letter-spacing: 1px;
-}
-
 .rating span {
     margin-right: 15px;
 }
@@ -154,7 +138,7 @@ function decrease() {
 .description {
     font-size: 17px;
     height: 50vh;
-    overflow-y:auto;
+    overflow-y: auto;
     font-weight: 500;
 }
 
