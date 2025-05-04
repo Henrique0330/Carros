@@ -13,26 +13,27 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-  {
-    path: '/TelaInicial',
-    name: 'telaInicial',
+    {
+    path: '/',
+    name: 'telainicial',
     component: TelaInicialView
-  },
-  {
+    },
+    {
     path: '/produto',
     name: 'Produto',
     component: Produto
-  },
-  ],
-    path: '/Login',
+    },
+    {
+      path: '/Login',
     name: 'loginComponent',
     component: LoginComponentView
-  },
-  {
+    },
+    {
     path: '/Cadastro',
     name: 'cadastroComponent',
     component: CadastroComponentView
   },
-)
+  ],
+})
 
 export default router

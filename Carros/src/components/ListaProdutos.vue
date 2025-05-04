@@ -32,11 +32,6 @@ export default {
                     descricao: "Carros top para seu filho",
                     preco: 200.00,
                     imagem: "/relampago.png"
-                }, {
-                    titulo: "McQueen",
-                    descricao: "Carros top para seu filho",
-                    preco: 200.00,
-                    imagem: "/relampago.png"
                 },
                 {
                     titulo: "McQueen",
@@ -74,7 +69,12 @@ export default {
                     preco: 200.00,
                     imagem: "/relampago.png"
                 },
-
+                {
+                    titulo: "McQueen",
+                    descricao: "Carros top para seu filho",
+                    preco: 200.00,
+                    imagem: "/relampago.png"
+                },
             ]
         };
     }
@@ -82,6 +82,7 @@ export default {
 </script>
 
 <template>
+    <h1 class="titulo-produtos">Nossos Produtos</h1>
     <div class="cards-container">
         <div class="card" v-for="(item, index) in produtos" :key="index">
             <img :src="item.imagem" alt="Imagem do produto" class="card-img">
@@ -91,7 +92,6 @@ export default {
                 <p class="preco">R${{ item.preco }}</p>
                 <div class="texto">
                     <button class="comprar">comprar</button>
-                    <button class="visualizar">visualizar</button>
                 </div>
             </div>
         </div>
@@ -123,21 +123,16 @@ button {
     display: flex;
     gap: 38%;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.ButtomCarrinho {
-    align-content: center;
-}
-
+.ButtomCarrinho,
 .ButtomSeta {
     align-content: center;
 }
 
-.seta {
-    width: 30px;
-    height: 30px;
-}
-
+.seta,
 .carrinho {
     width: 30px;
     height: 30px;
@@ -147,7 +142,11 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
+    margin: 5% auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
 .card {
@@ -194,18 +193,21 @@ button {
 
 .comprar {
     background-color: #3C0B0B;
-    width: 50%;
+    width: 70%;
     height: 25px;
-}
-
-.visualizar {
-    height: 25px;
-    width: 4rem;
 }
 
 .texto {
     display: flex;
     gap: 5px;
+}
+
+.titulo-produtos {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 50px;
+    text-align: center;
+    color: black;
 }
 
 @media (max-width: 1024px) {
@@ -240,8 +242,6 @@ button {
 
 @media (max-width: 600px) {
     .cards-container {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
     }
@@ -249,7 +249,6 @@ button {
     .card {
         width: 45%;
         min-width: 130px;
-        box-sizing: border-box;
         text-align: center;
     }
 
@@ -278,25 +277,15 @@ button {
     }
 
     .texto {
-        display: flex;
         justify-content: center;
         gap: 5px;
     }
 }
 
 @media (max-width: 400px) {
-    .cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
     .card {
         width: 48%;
         min-width: 120px;
-        box-sizing: border-box;
-        text-align: center;
     }
 
     .card-img {
@@ -317,8 +306,6 @@ button {
     }
 
     .texto {
-        display: flex;
-        justify-content: center;
         gap: 6px;
     }
 
@@ -331,18 +318,9 @@ button {
 }
 
 @media (max-width: 300px) {
-    .cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-
     .card {
         width: 95%;
         min-width: 100px;
-        box-sizing: border-box;
-        text-align: center;
     }
 
     .card-img {
@@ -363,7 +341,6 @@ button {
     }
 
     .texto {
-        justify-content: center;
         gap: 5px;
     }
 
