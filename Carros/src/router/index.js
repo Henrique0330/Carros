@@ -4,8 +4,10 @@ import TelaInicialView from '../views/TelaInicialView.vue'
 import LoginComponentView from '@/views/LoginComponentView.vue'
 import CadastroComponentView from '@/views/CadastroComponentView.vue'
 
-const routes = [
-  {
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
     path: '/',
     name: 'home',
     component: HomeView
@@ -25,11 +27,7 @@ const routes = [
     name: 'cadastroComponent',
     component: CadastroComponentView
   },
-]
-
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes
+  ]
 })
 
 export default router
