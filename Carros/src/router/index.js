@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TelaInicialView from '../views/TelaInicialView.vue'
-import Produto from '@/components/produto.vue'
+import Produto from '@/components/Produto.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +18,7 @@ const router = createRouter({
   },
   {
     path: '/produto',
-    name: 'produto',
+    name: 'Produto',
     component: Produto
   },
   ],

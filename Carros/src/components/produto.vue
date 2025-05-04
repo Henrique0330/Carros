@@ -2,7 +2,7 @@
     <div class="container">
         <div class="buttons">
             <button class="botaoVoltar" style="left: 23px;"><img src="/public/setinha.png" alt=""></button>
-            <button class="botao" style="right: 23px;"><img src="/public/carrinho.png" alt=""></button>
+            <button class="botao" style="right: 23px;"><img src="/public/carinhoo.png" alt=""></button>
         </div>
         <div class="card">
             <div class="car-image">
