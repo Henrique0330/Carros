@@ -4,32 +4,38 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const openLoginPage = () => {
-  router.push('/login')
+    router.push('/login')
+}
+
+const openCadastroPage = () => {
+    router.push('/cadastro')
 }
 </script>
 
 <template>
-  <div class="background-image"></div>
-  <div class="container">
-    <img class="logo" src="/McStore.png" alt="logo">
-    <div class="text">
-      <p>
-        Read more and stress less with our online book shopping app.
-        Shop from anywhere you are and discover titles that you love.
-        Happy reading!
-      </p>
-    </div>
-  </div>
+    <div>
+        <div class="background-image"></div>
+        <div class="container">
+            <img class="logo" src="/McStore.png" alt="logo">
+            <div class="text">
+                <p>
+                    Read more and stress less with our online book shopping app.
+                    Shop from anywhere you are and discover titles that you love.
+                    Happy reading!
+                </p>
+            </div>
+        </div>
 
-  <div class="buttom">
-    <div class="login">
-      <button class="buttomLogin" @click="openLoginPage">Faça o login!</button>
+        <div class="buttom">
+            <div class="login">
+                <button class="buttomLogin" @click="openLoginPage">Faça o login!</button>
+            </div>
+            <span>|</span>
+            <div class="register">
+                <button class="buttomRegister" @click="openCadastroPage">Registrar-se!</button>
+            </div>
+        </div>
     </div>
-    <span>|</span>
-    <div class="register">
-      <button class="buttomRegister">Registrar-se!</button>
-    </div>
-  </div>
 </template>
 
 
@@ -119,7 +125,7 @@ img {
 span {
     color: white;
     font-size: 40px;
-    border-radius: 10px ;
+    border-radius: 10px;
 }
 
 /* Responsividade */
@@ -153,7 +159,7 @@ span {
     }
 
     span {
-    display: none;
+        display: none;
     }
 }
 
