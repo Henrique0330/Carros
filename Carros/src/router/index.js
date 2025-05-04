@@ -1,26 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TelaInicialView from '../views/TelaInicialView.vue'
-import ListaProdutosView from '@/views/ListaProdutosView.vue'
+import LoginComponentView from '@/views/LoginComponentView.vue'
+import CadastroComponentView from '@/views/CadastroComponentView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/home',
-      name: 'home',
-      component: HomeView,
-    },
-    {
-      path: '/',
-      name: 'telaInicial',
-      component: TelaInicialView,
-    },
-    {
-      path: '/ListaProdutos',
-      name: 'ListaProdutos',
-      component: ListaProdutosView,
-    }
+    path: '/',
+    name: 'home',
+    component: HomeView
+  },
+  {
+    path: '/TelaInicial',
+    name: 'telaInicial',
+    component: TelaInicialView
+  },
+  {
+    path: '/Login',
+    name: 'loginComponent',
+    component: LoginComponentView
+  },
+  {
+    path: '/Cadastro',
+    name: 'cadastroComponent',
+    component: CadastroComponentView
+  },
   ]
 })
 
