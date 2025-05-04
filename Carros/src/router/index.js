@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TelaInicialView from '../views/TelaInicialView.vue'
-import Produto from '@/components/Produto.vue'
+import Produto from '@/components/produto.vue'
 import LoginComponentView from '@/views/LoginComponentView.vue'
 import CadastroComponentView from '@/views/CadastroComponentView.vue'
 
@@ -13,11 +13,6 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
   {
     path: '/TelaInicial',
     name: 'telaInicial',
@@ -38,7 +33,6 @@ const router = createRouter({
     name: 'cadastroComponent',
     component: CadastroComponentView
   },
-  ]
-})
+)
 
 export default router

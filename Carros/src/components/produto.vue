@@ -188,7 +188,7 @@ button {
         height: 55vh;
         position: absolute;
         bottom: 0;
-        padding: 0;
+        padding: 2;
         border-radius: 5px;
     }
 
