@@ -1,25 +1,43 @@
 <script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const openLoginPage = () => {
+    router.push('/login')
+}
+
+const openCadastroPage = () => {
+    router.push('/cadastro')
+}
 </script>
 
 <template>
-    <div class="background-image"></div>
-    <div class="container">
-        <img class="logo" src="/McStore.png" alt="logo">
-        <div class="text">
-            <p>Read more and stress less with our online book shopping app. Shop from anywhere you are and discover
-                titles that you love. Happy reading!</p>
+    <div>
+        <div class="background-image"></div>
+        <div class="container">
+            <img class="logo" src="/McStore.png" alt="logo">
+            <div class="text">
+                <p>
+                    Read more and stress less with our online book shopping app.
+                    Shop from anywhere you are and discover titles that you love.
+                    Happy reading!
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="buttom">
-        <div class="login">
-            <button class="buttomLogin">Faça o login!</button>
-        </div>
-        <span>|</span>
-        <div class="register">
-            <button class="buttomRegister">Registrar-se!</button>
+
+        <div class="buttom">
+            <div class="login">
+                <button class="buttomLogin" @click="openLoginPage">Faça o login!</button>
+            </div>
+            <span>|</span>
+            <div class="register">
+                <button class="buttomRegister" @click="openCadastroPage">Registrar-se!</button>
+            </div>
         </div>
     </div>
 </template>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -107,7 +125,7 @@ img {
 span {
     color: white;
     font-size: 40px;
-    border-radius: 10px ;
+    border-radius: 10px;
 }
 
 /* Responsividade */
@@ -141,7 +159,7 @@ span {
     }
 
     span {
-    display: none;
+        display: none;
     }
 }
 
@@ -168,7 +186,6 @@ span {
 
     .text {
         top: 70%;
-        /* Mudei o valor de "top" para deslocar o texto para baixo */
         left: 10%;
         width: 80%;
         font-size: 14px;
@@ -212,7 +229,6 @@ span {
 
     .text {
         top: 66%;
-        /* Mudei o valor de "top" para deslocar o texto para baixo */
         left: 10%;
         width: 80%;
         font-size: 14px;
