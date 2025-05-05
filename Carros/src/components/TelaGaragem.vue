@@ -64,7 +64,7 @@ nav {
     background-color: white;
     margin: 20px auto;
     border-radius: 32px;
-    height: 142px;
+    height: 140px;
 }
 
 .itens-cima {
@@ -107,6 +107,7 @@ input {
 .info-extra {
     display: flex;
     gap: 2rem;
+    margin-top: 10px;
 }
 
 .info-extra p {
