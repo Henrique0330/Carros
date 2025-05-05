@@ -75,7 +75,7 @@ nav {
     width: 37px;
     height: 37px;
     margin-left: 15rem;
-    margin-top: 1.3rem;
+    margin-top: 1.5rem;
     cursor: pointer;
 }
 
