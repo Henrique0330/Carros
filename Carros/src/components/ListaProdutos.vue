@@ -91,7 +91,7 @@ export default {
                 <p class="descricao">{{ item.descricao }}</p>
                 <p class="preco">R${{ item.preco }}</p>
                 <div class="texto">
-                    <button class="comprar">comprar</button>
+                    <button class="comprar"><router-link class="router" to="/produto">comprar</router-link></button>
                 </div>
             </div>
         </div>
@@ -208,6 +208,11 @@ button {
     margin: 50px;
     text-align: center;
     color: black;
+}
+
+.router {
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (max-width: 1024px) {
