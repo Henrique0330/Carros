@@ -106,7 +106,7 @@ input {
 }
 .info-extra {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     margin-top: 10px;
 }
 
