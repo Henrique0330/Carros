@@ -127,6 +127,7 @@ input {
     padding: 1rem 0;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     height: 6rem;
+    height: 150px;
 }
 .comprar > button{
     width: 16rem;
