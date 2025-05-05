@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="buttons">
-            <button class="botaoVoltar" style="left: 23px;"><img src="/public/setinha.png" alt=""></button>
-            <button class="botao" style="right: 23px;"><img src="/public/carinhoo.png" alt=""></button>
+            <button @click="voltar" class="botaoVoltar" style="left: 23px;"><img src="/public/setinha.png" alt=""></button>
+            <button @click="carrinho" class="botao" style="right: 23px;"><img src="/public/carinhoo.png" alt=""></button>
         </div>
         <div class="card">
             <div class="car-image">
@@ -10,10 +10,10 @@
             </div>
             <div class="details">
                 <div class="titulo">
-                    <p>Fiat argo 1.8 flex</p>
+                    <p>Carro McQueen</p>
                 </div>
                 <div class="precoConta">
-                    <p class="price" style="letter-spacing: 1px; font-size: 25px;">R$159,00</p>
+                    <p class="price" style="letter-spacing: 1px; font-size: 25px;">R$200,00</p>
                     <div class="quantity">
                         <button @click="increase">+</button>
                         <span style="font-weight: bolder;">{{ quantity }}</span>
@@ -38,7 +38,7 @@
 
                 </p>
                 <div class="botaoAdd">
-                    <button class="add-button">ADICIONE À GARAGEM</button>
+                    <button @click="alerta" class="add-button">ADICIONE À GARAGEM</button>
                 </div>
             </div>
         </div>
@@ -46,8 +46,10 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 const quantity = ref(1)
+const router = useRouter();
 
 function increase() {
     quantity.value++
@@ -55,6 +57,16 @@ function increase() {
 function decrease() {
     if (quantity.value > 1) quantity.value--
 }
+
+const voltar = () => {
+  router.push("/home");
+};
+const carrinho = () => {
+  router.push("/garagem");
+};
+const alerta = () => {
+  alert("Produto adicionado à garagem!");
+};
 </script>
 
 <style scoped>

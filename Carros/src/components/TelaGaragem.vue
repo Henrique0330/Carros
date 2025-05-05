@@ -1,5 +1,10 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+const router = useRouter();
+const voltar = () => {
+  router.push("/home");
+};
 
 const total = ref(200);
 const precoProduto = 200; 
@@ -25,7 +30,7 @@ function removerItem(event) {
 
 <template>
   <nav>
-    <div class="back-button">
+    <div @click="voltar" class="back-button">
       <img src="/BackIcon.png" alt="" class="back-img" />
     </div>
     <h1 class="text-garagem">Minha Garagem</h1>

@@ -42,7 +42,7 @@ const user = reactive({
 
 
 const voltar = () => {
-  router.push("/telaInicial");
+  router.push("/");
 };
 
 const openCadastroPage = () => {

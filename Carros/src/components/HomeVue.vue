@@ -13,7 +13,7 @@ import ListaProdutosView from '@/views/ListaProdutosView.vue';
         <div class="conteudo-nav">
             <a href=""><img src="/user.png" class="user-img-mobile" alt=""></a>
             <img src="/logo.png" class="logo-mobile" alt="">
-            <a href=""><img class="cart-img-mobile" src="/shopping-cart.png" alt=""></a>
+            <a href="" ><img class="cart-img-mobile" src="/shopping-cart.png" alt=""></a>
         </div>
     </nav>
     <div class="container">
