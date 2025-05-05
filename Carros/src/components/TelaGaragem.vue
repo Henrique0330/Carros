@@ -205,6 +205,12 @@ input {
     width: 25px;
     height: 25px;
 }
+.comprar>button{
+    width: 168px;
+    height: 68px;
+    font-size: 16px;
+    font-weight: bold;
+}
 }
 @media (max-width: 691px){
     .info-extra p {
