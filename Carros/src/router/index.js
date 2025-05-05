@@ -16,9 +16,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-    path: '/',
-    name: 'telainicial',
-    component: TelaInicialView
+      path: '/',
+      name: 'telainicial',
+      component: TelaInicialView
     },
     {
       path: '/ListaProdutos',
@@ -29,22 +29,22 @@ const router = createRouter({
       path: '/garagem',
       name: 'garagem',
       component: GaragemView
-    }
-  ]
-    path: '/produto',
-    name: 'Produto',
-    component: Produto
+    },
+    {
+      path: '/produto',
+      name: 'Produto',
+      component: Produto
     },
     {
       path: '/Login',
-    name: 'loginComponent',
-    component: LoginComponentView
+      name: 'loginComponent',
+      component: LoginComponentView
     },
     {
-    path: '/Cadastro',
-    name: 'cadastroComponent',
-    component: CadastroComponentView
-  },
+      path: '/Cadastro',
+      name: 'cadastroComponent',
+      component: CadastroComponentView
+    },
   ],
 })
 
