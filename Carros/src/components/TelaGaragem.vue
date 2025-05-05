@@ -98,6 +98,7 @@ input {
     flex-direction: column;
     margin-left: 5.75rem;
     width: 609px;
+    margin-top: 1.3rem;
 }
 .descricao > h1{
     font-weight: 500;
