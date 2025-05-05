@@ -131,7 +131,7 @@ span {
 /* Responsividade */
 @media (max-width: 768px) {
     .buttom {
-        margin-top: 19rem;
+        margin-top: 50rem;
         gap: 2rem;
         flex-direction: column;
         left: 15%;
@@ -151,13 +151,13 @@ span {
     }
 
     .text {
-        top: 75%;
+        top: 50%;
         left: 15%;
         width: 70%;
         font-size: 16px;
         text-align: center;
     }
-
+   
     span {
         display: none;
     }
@@ -165,7 +165,6 @@ span {
 
 @media (max-width: 500px) {
     .buttom {
-        margin-top: 19rem;
         gap: 1.5rem;
         flex-direction: column;
         align-items: center;
@@ -175,7 +174,7 @@ span {
     .login,
     .register {
         width: 63%;
-        height: 42px;
+        height: 60px;
     }
 
     img {
@@ -184,55 +183,6 @@ span {
         height: 12rem;
     }
 
-    .text {
-        top: 70%;
-        left: 10%;
-        width: 80%;
-        font-size: 14px;
-        text-align: center;
-    }
-}
-
-
-@media (max-width: 400px) {
-    .buttom {
-        gap: 1.5rem;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 50px;
-
-    }
-
-    .login,
-    .register {
-        width: 70%;
-        height: 40px;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    .buttomLogin {
-        font-size: 17.5px;
-    }
-
-    .buttomRegister {
-        font-size: 17.5px;
-    }
-
-    img {
-        margin-top: 2rem;
-        width: 10.5rem;
-        height: 10.5rem;
-    }
-
-    .text {
-        top: 66%;
-        left: 10%;
-        width: 80%;
-        font-size: 14px;
-        text-align: center;
-    }
+   
 }
 </style>

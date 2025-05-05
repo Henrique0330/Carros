@@ -79,6 +79,7 @@ export default {
         };
     }
 };
+
 </script>
 
 <template>
@@ -91,7 +92,7 @@ export default {
                 <p class="descricao">{{ item.descricao }}</p>
                 <p class="preco">R${{ item.preco }}</p>
                 <div class="texto">
-                    <button class="comprar">comprar</button>
+                    <button class="comprar" >COMPRAR</button>
                 </div>
             </div>
         </div>

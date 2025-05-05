@@ -1,31 +1,59 @@
+<script setup>
+import { ref } from 'vue'
+
+const total = ref(200);
+const precoProduto = 200; 
+function toggleCheckbox(event) {
+  if (event.target.checked) {
+    total.value += precoProduto;
+  } else {
+    total.value -= precoProduto;
+  }
+}
+
+function removerItem(event) {
+  const card = event.target.closest('.card');
+  if (card) {
+    card.style.display = 'none';
+  }
+  const checkbox = card.querySelector('input[type="checkbox"]');
+  if (checkbox && checkbox.checked) {
+    total.value -= precoProduto;
+  }
+}
+</script>
+
 <template>
-    <nav>
-        <div class="back-button">
-            <img src="/BackIcon.png" alt="" class="back-img">
-        </div>
-        <h1 class="text-garagem">Minha Garagem</h1>
-    </nav>
-    <div class="card">
-        <div class="itens-cima">
-            <input type="checkbox" name="" id="">
-            <div class="img-carro">
-                <img src="/carro-garagem.png" alt="">
-            </div>
-            <div class="descricao">
-                <h1 class="text-product">Carro Mcqueen</h1>
-                <div class="info-extra">
-                    <p><strong>Unidades:</strong> 2</p>
-                    <p><strong>Preço:</strong> R$ 200,00</p>
-                </div>
-            </div>
-            <img class="img-lixeira" src="/lixeira-icon.png" alt="">
-        </div>
+  <nav>
+    <div class="back-button">
+      <img src="/BackIcon.png" alt="" class="back-img" />
     </div>
-    <div class="comprar">
-        <button>COMPRAR</button>
-        <p>Preço:200,00</p>
+    <h1 class="text-garagem">Minha Garagem</h1>
+  </nav>
+
+  <div class="card">
+    <div class="itens-cima">
+      <input type="checkbox"checked @change="toggleCheckbox" />
+      <div class="img-carro">
+        <img src="/carro-garagem.png" alt="" />
+      </div>
+      <div class="descricao">
+        <h1 class="text-product">Carro Mcqueen</h1>
+        <div class="info-extra">
+          <p><strong>Unidades:</strong> 1</p>
+          <p><strong>Preço:</strong> R$ 200,00</p>
+        </div>
+      </div>
+      <img class="img-lixeira" src="/lixeira-icon.png" alt="" @click="removerItem" />
     </div>
+  </div>
+
+  <div class="comprar">
+    <button>COMPRAR</button>
+    <p>Preço: {{ total.toFixed(2) }}</p>
+  </div>
 </template>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -63,7 +91,7 @@ nav {
     width: 86%;
     background-color: white;
     margin: 20px auto;
-    border-radius: 32px;
+    border-radius: 25px;
     height: 140px;
 }
 
@@ -137,6 +165,11 @@ input {
     background-color: #4A1010;
     color: white;
     font-size: 20px;
+    cursor: pointer;
+}
+.comprar > button:hover{
+    transition: 0.2s;
+    background-color: #8f1818;
 }
 .comprar > p{
     font-size: 20px;
