@@ -1,35 +1,9 @@
-# Carros
+# McStore
 
-This template should help get you started developing with Vue 3 in Vite.
+Bem-vindo ao Carros Market — um sistema de vendas inspirado no universo do filme Carros da Pixar!
+Aqui, Relâmpago McQueen, Mate, Sally e muitos outros personagens ganharam uma nova função: agora eles estão à venda.
 
-## Recommended IDE Setup
+**🛠 Sobre o Projeto**
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+Este sistema foi desenvolvido como parte do nosso Desenvolvimento para dispositivos móveis, com foco em aplicar conhecimentos de desenvolvimento web, banco de dados e lógica de programação.
+A proposta é simular uma loja virtual onde cada personagem do filme é tratado como um "produto" com ficha técnica, preço e disponibilidade.
